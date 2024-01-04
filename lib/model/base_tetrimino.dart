@@ -6,7 +6,7 @@ class TetriminoInfo {
   List<TetriminoCollision> tetrimino;
   bool disableCollision;
 
-  TetriminoInfo({this.tetrimino, this.disableCollision});
+  TetriminoInfo({required this.tetrimino, required this.disableCollision});
 }
 
 class BaseTetrimino {
@@ -32,7 +32,7 @@ class BaseTetrimino {
       createTetrimino(TETRIMINO_NAME.O, rotatePosition);
 
   TetriminoInfo createTetrimino(TETRIMINO_NAME name, int rotatePosition) {
-    TetriminoInfo itemList = TetriminoInfo(tetrimino: []);
+    TetriminoInfo itemList = TetriminoInfo(tetrimino: [], disableCollision: false);
     for (int i = 0; i < 4; i++) {
       if (TetriminoCollision()
               .createCollision(name, i, rotatePosition)
@@ -50,7 +50,7 @@ class BaseTetrimino {
 }
 
 class TetriminoCollision {
-  List<bool> collision;
+  late List<bool> collision;
 
   TetriminoCollision createCollision(
       TETRIMINO_NAME name, int index, int rotatePosition) {

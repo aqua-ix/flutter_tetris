@@ -14,25 +14,25 @@ import 'display_next_tetrimino.dart';
 class GameScreen extends StatefulWidget {
   final VoidCallback resetCallBack;
 
-  GameScreen({@required this.resetCallBack});
+  GameScreen({required this.resetCallBack});
 
   @override
   _GameScreenState createState() => _GameScreenState();
 }
 
 class _GameScreenState extends State<GameScreen> {
-  int baseHorizontalPosition;
-  int rightHorizontalPosition;
-  int baseVerticalPosition;
-  int bottomVerticalPosition;
-  int rotatePosition;
-  int nextRotatePosition;
-  int minHorizontal;
-  Timer _timer;
-  int score;
-  List<List<PiledTetrimino>> piledUpTetrimino;
-  TETRIMINO_NAME initTetrimino;
-  TETRIMINO_NAME nextTetrimino;
+  late int baseHorizontalPosition;
+  late int rightHorizontalPosition;
+  late int baseVerticalPosition;
+  late int bottomVerticalPosition;
+  late int rotatePosition;
+  late int nextRotatePosition;
+  late int minHorizontal;
+  late Timer _timer;
+  late int score;
+  late List<List<PiledTetrimino>> piledUpTetrimino;
+  late TETRIMINO_NAME initTetrimino;
+  late TETRIMINO_NAME nextTetrimino;
 
   @override
   void initState() {
@@ -74,7 +74,7 @@ class _GameScreenState extends State<GameScreen> {
       List<PiledTetrimino> _row = [];
       for (int j = 0; j < 10; j++) {
         _row.add(
-          PiledTetrimino(collision: false),
+          PiledTetrimino(collision: false, tetrimino: null),
         );
       }
       piledUpTetrimino.add(_row);
@@ -221,7 +221,7 @@ class _GameScreenState extends State<GameScreen> {
         List<PiledTetrimino> _row = [];
         for (int j = 0; j < 10; j++) {
           _row.add(
-            PiledTetrimino(collision: false),
+            PiledTetrimino(collision: false, tetrimino: null),
           );
         }
         score++;

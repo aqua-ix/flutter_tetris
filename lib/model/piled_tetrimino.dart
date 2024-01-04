@@ -4,11 +4,11 @@ import 'package:flutter_tetoris/util/tetrimino.dart';
 
 class PiledTetrimino {
   bool collision;
-  TETRIMINO_NAME tetrimino;
+  TETRIMINO_NAME? tetrimino;
 
   Color get tetriminoColors {
-    return getTetriminoColor(tetrimino);
+    return getTetriminoColor(tetrimino!);
   }
 
-  PiledTetrimino({this.collision, this.tetrimino});
+  PiledTetrimino({required this.collision, this.tetrimino});
 }

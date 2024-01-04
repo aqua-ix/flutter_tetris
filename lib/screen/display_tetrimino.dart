@@ -13,13 +13,13 @@ class DisplayTetrimino extends StatefulWidget {
   final Function(int) changeBottomVerticalPosition;
 
   DisplayTetrimino({
-    @required this.initTetrimino,
-    @required this.initHorizontalPosition,
-    @required this.initVerticalPosition,
-    @required this.rotatePosition,
-    @required this.existDisablePosition,
-    @required this.changeRightHorizontalPosition,
-    @required this.changeBottomVerticalPosition,
+    required this.initTetrimino,
+    required this.initHorizontalPosition,
+    required this.initVerticalPosition,
+    required this.rotatePosition,
+    required this.existDisablePosition,
+    required this.changeRightHorizontalPosition,
+    required this.changeBottomVerticalPosition,
   });
 
   @override

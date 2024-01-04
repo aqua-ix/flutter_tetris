@@ -8,8 +8,8 @@ class DisplayNextTetrimino extends StatefulWidget {
   final int rotatePosition;
 
   DisplayNextTetrimino({
-    @required this.initTetrimino,
-    @required this.rotatePosition,
+    required this.initTetrimino,
+    required this.rotatePosition,
   });
 
   @override

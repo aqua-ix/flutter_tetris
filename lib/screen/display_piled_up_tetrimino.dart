@@ -6,7 +6,7 @@ class DisplayPiledUpTetrimino extends StatelessWidget {
   final List<List<PiledTetrimino>> piledUpTetrimino;
 
   DisplayPiledUpTetrimino({
-    @required this.piledUpTetrimino,
+    required this.piledUpTetrimino,
   });
 
   Container _getTetriminoWidget(bool collision, Color widgetColor) {

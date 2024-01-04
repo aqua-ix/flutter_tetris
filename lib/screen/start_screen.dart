@@ -71,8 +71,7 @@ class _StartScreenState extends State<StartScreen> {
                         Container(
                           width: 200,
                           height: 100,
-                          child: RaisedButton(
-                            color: Colors.blue,
+                          child: ElevatedButton(
                             child: Text("START"),
                             onPressed: () {
                               setState(() {
